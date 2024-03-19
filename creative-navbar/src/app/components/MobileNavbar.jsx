@@ -70,7 +70,7 @@ const MobileNavbar = () => {
                                                 initial={{ translateY: 40 }}
                                                 animate={{ translateY: isOpen ? 0 : 40 }}
                                                 exit={{ opacity: 0, transition: { delay: 0.15, duration: 0.3 } }}
-                                                transition={{ duration: 0.3, delay: isOpen ? 0.5 : 0, ease: 'easeInOut' }}
+                                                transition={{ duration: 0.3, delay: isOpen ? 0.45 : 0, ease: 'easeInOut' }}
                                             >
                                                 Pricing
                                             </motion.h1>
@@ -83,7 +83,7 @@ const MobileNavbar = () => {
                                             initial={{ translateY: 40 }}
                                             animate={{ translateY: isOpen ? 0 : 40 }}
                                             exit={{ opacity: 0, transition: { delay: 0.3, duration: 0.3 } }}
-                                            transition={{ duration: 0.3, delay: isOpen ? 0.7 : 0, ease: 'easeInOut' }}
+                                            transition={{ duration: 0.3, delay: isOpen ? 0.6 : 0, ease: 'easeInOut' }}
                                             className="flex flex-row w-fit h-fit items-center gap-x-2 overflow-hidden"
                                         >
                                             <div clasName="w-fit h-fit">
@@ -105,9 +105,9 @@ const MobileNavbar = () => {
                                                 initial={{ translateY: 40 }}
                                                 animate={{ translateY: isOpen ? 0 : 40 }}
                                                 exit={{ opacity: 0, transition: { delay: 0.45, duration: 0.3 } }}
-                                                transition={{ duration: 0.3, delay: isOpen ? 0.9 : 0, ease: 'easeInOut' }}
+                                                transition={{ duration: 0.3, delay: isOpen ? 0.75 : 0, ease: 'easeInOut' }}
                                             >
-                                                Portfolio
+                                                Blog
                                             </motion.h1>
                                         </li>
                                     </Link>
