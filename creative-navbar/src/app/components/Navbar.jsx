@@ -4,75 +4,45 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-// Component
-import DropdownModal from './DropdownModal';
-
 const Navbar = () => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
-  const handleDropdownEnter = () => {
-    setIsDropdownOpen(true);
-  }
-
-  const handleDropdownLeave = () => {
-    setIsHovered(false);
-    setIsDropdownOpen(false);
-  };
-
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setIsDropdownOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-
-  return (
-    <header className="absolute top-0 left-0 lg:flex hidden w-screen h-[75px] bg-[#F0EFEF] p-2 z-[99]">
-      <nav className="flex flex-row justify-between items-center w-full h-full px-4">
-        {/* Studio Logo / Name */}
-        <div className="w-fit h-fit text-2xl font-black z-[3]">
-          <h1>Acme Studios</h1>
-        </div>
-
-        {/* Link List */}
-        <div className="flex flex-row w-fit h-fit gap-x-4 relative" ref={dropdownRef}>
-          <div
-            onMouseEnter={handleDropdownEnter}
-            onMouseLeave={handleDropdownLeave}
-            className="flex flex-row w-fit h-fit gap-x-1 cursor-pointer"
-          >
-            <div className="w-fit h-fit">
-              <h1>Services</h1>
-            </div>
-            <div className="w-fit h-fit translate-y-[1px]">
-              <Image src="/plus-black.svg" alt="Plus Icon" width={20} height={20} />
-            </div>
+    const [isHovered, setIsHovered] = useState(false);
+  
+    return (
+      <header className="absolute top-0 left-0 lg:flex hidden w-screen h-[75px] bg-[#F0EFEF] p-2 z-[99]">
+        <nav className="flex flex-row justify-between items-center w-full h-full px-4">
+          {/* Studio Logo / Name */}
+          <div className="w-fit h-fit text-2xl font-black z-[3]">
+            <h1>Acme Studios</h1>
           </div>
-          <DropdownModal isOpen={isDropdownOpen} onClose={() => setIsDropdownOpen(false)} />
-          <Link href="" className="cursor-pointer">
-            <div className="w-fit h-fit">
-              <h1>Pricing</h1>
+  
+          {/* Link List */}
+          <div className="flex flex-row w-fit h-fit gap-x-4 relative">
+            <div
+              className="flex flex-row w-fit h-fit gap-x-1 cursor-pointer"
+            >
+              <div className="w-fit h-fit">
+                <h1>Services</h1>
+              </div>
+              <div className="w-fit h-fit translate-y-[1px]">
+                <Image src="/plus-black.svg" alt="Plus Icon" width={20} height={20} />
+              </div>
             </div>
-          </Link>
-          <Link href="">
-            <div className="w-fit h-fit">
-              <h1>Works</h1>
-            </div>
-          </Link>
-          <Link href="">
-            <div className="w-fit h-fit">
-              <h1>Blog</h1>
-            </div>
-          </Link>
-        </div>
+            <Link href="" className="cursor-pointer">
+              <div className="w-fit h-fit">
+                <h1>Pricing</h1>
+              </div>
+            </Link>
+            <Link href="">
+              <div className="w-fit h-fit">
+                <h1>Works</h1>
+              </div>
+            </Link>
+            <Link href="">
+              <div className="w-fit h-fit">
+                <h1>Blog</h1>
+              </div>
+            </Link>
+          </div>
 
         {/* Animated Button */}
         <div
