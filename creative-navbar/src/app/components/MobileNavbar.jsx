@@ -76,7 +76,9 @@ const MobileNavbar = () => {
                                             </motion.h1>
                                         </li>
                                     </Link>
-                                    <Link href="" className="overflow-hidden">
+                                    
+                                    {/* Dropdown Services */}
+                                    <div href="" className="overflow-hidden">
                                         <motion.li 
                                             initial={{ translateY: 40 }}
                                             animate={{ translateY: isOpen ? 0 : 40 }}
@@ -87,7 +89,7 @@ const MobileNavbar = () => {
                                             <div clasName="w-fit h-fit">
                                                 <h1>Services</h1>
                                             </div>
-                                            <div className="w-fit h-fit">
+                                            <div className="w-fit h-fit sm:-translate-y-0 -translate-y-[4px]">
                                                 <Image
                                                     src="/plus.svg"
                                                     alt="Add Icon"
@@ -96,7 +98,7 @@ const MobileNavbar = () => {
                                                 />
                                             </div>
                                         </motion.li>
-                                    </Link>
+                                    </div>
                                     <Link href="">
                                         <li className="w-fit h-fit overflow-hidden">
                                             <motion.h1
