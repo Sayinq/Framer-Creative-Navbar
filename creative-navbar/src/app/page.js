@@ -7,7 +7,7 @@ export default function Home() {
     <main className="w-screen h-screen">
       <Navbar />
       <MobileNavbar />
-      <section className="flex justify-center items-center w-full h-full">
+      <section className="flex justify-center items-center w-full h-full text-3xl font-black text-[#d2d2d2]">
         <h2>Resuable Navbar</h2>
       </section>
     </main>
