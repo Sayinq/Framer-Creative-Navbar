@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    background-color: #1A1A1A;
+}
+
 @font-face {
     font-family: "PPMori";
     src: url("/font/PPMori.otf") format("opentype");

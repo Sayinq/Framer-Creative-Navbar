@@ -113,7 +113,7 @@ const MobileNavbar = () => {
                                             {isDropdown && (
                                                 <motion.div
                                                     initial={{ height: 0 }}
-                                                    animate={{ height: isDropdown ? 170 : 0 }}
+                                                    animate={{ height: isDropdown ? 220 : 0 }}
                                                     exit={{ height: 0 }}
                                                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                                                     className="w-full h-fit overflow-hidden"
@@ -121,17 +121,22 @@ const MobileNavbar = () => {
                                                     <div className="flex flex-col w-full h-fit gap-y-4 mt-2">
                                                         {/* Development */}
                                                         <div className="flex justify-center items-center w-full h-[40px] rounded-full hover:border-0 border-[0.5px] border-white/30 hover:bg-[#F0EFEF] hover:text-black hover:tracking-normal transition-all duration-300 ease-in-out uppercase gap-x-2 cursor-pointer overflow-hidden">
-                                                            <h1>Development</h1>
+                                                            <h1>Web Development</h1>
                                                         </div>
 
                                                         {/* Optimization */}
                                                         <div className="flex justify-center items-center w-full h-[40px] rounded-full hover:border-0 border-[0.5px] border-white/30 hover:bg-[#F0EFEF] hover:text-black hover:tracking-normal transition-all duration-300 ease-in-out uppercase gap-x-2 cursor-pointer overflow-hidden">
-                                                            <h1>Optimization</h1>
+                                                            <h1> Search Optimization</h1>
                                                         </div>
 
                                                         {/* Custom Design */}
                                                         <div className="flex justify-center items-center w-full h-[40px] rounded-full hover:border-0 border-[0.5px] border-white/30 hover:bg-[#F0EFEF] hover:text-black hover:tracking-normal transition-all duration-300 ease-in-out uppercase gap-x-2 cursor-pointer overflow-hidden">
                                                             <h1>Custom Design</h1>
+                                                        </div>
+
+                                                        {/* Custom Design */}
+                                                        <div className="flex justify-center items-center w-full h-[40px] rounded-full hover:border-0 border-[0.5px] border-white/30 hover:bg-[#F0EFEF] hover:text-black hover:tracking-normal transition-all duration-300 ease-in-out uppercase gap-x-2 cursor-pointer overflow-hidden">
+                                                            <h1>MVP Development</h1>
                                                         </div>
                                                     </div>
                                                 </motion.div>
@@ -159,7 +164,7 @@ const MobileNavbar = () => {
                                 exit={{ opacity: 0, transition: {delay: 0.7, duration: 0.3 }}}
                                 transition={{ duration: 0.3, delay: isOpen ? 1 : 0, ease: 'easeInOut' }}
                                 className="max-w-[220px] w-full h-auto overflow-hidden">
-                                <div className="flex justify-center items-center w-full h-[40px] rounded-full border-[0.5px] border-white/30 uppercase gap-x-2 mt-[2rem] cursor-pointer overflow-hidden">
+                                <div className="flex justify-center items-center w-full h-[40px] rounded-full border-[0.5px] border-white/30 uppercase gap-x-2 mt-[1.25rem] cursor-pointer overflow-hidden">
                                     <div className="flex flex-row justify-center items-center w-fit h-fit px-4 gap-x-2">
                                         <div className="w-fit h-fit tracking-[-0.085rem]">
                                             <h1>Get in touch</h1>
