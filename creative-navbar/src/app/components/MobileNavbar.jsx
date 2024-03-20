@@ -83,7 +83,8 @@ const MobileNavbar = () => {
                                     
                                     {/* Dropdown Services */}
                                     <div href="" className="w-full h-fit overflow-hidden">
-                                        <motion.li 
+                                        <motion.li
+                                            id="dropdown-link" 
                                             initial={{ translateY: 40 }}
                                             animate={{ translateY: isOpen ? 0 : 40 }}
                                             exit={{ opacity: 0, transition: { delay: 0.3, duration: 0.3 } }}

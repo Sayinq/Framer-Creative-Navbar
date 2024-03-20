@@ -11,6 +11,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css" />
+        <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
