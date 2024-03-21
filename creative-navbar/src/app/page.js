@@ -14,10 +14,9 @@ export default function Home() {
   useEffect(() => {
     if (containerRef.current) {
       const cursor = new MouseFollower({
-        el: null,
         container: containerRef.current,
         className: 'mf-cursor',
-        speed: 0.5,
+        speed: 0.1,
         ease: 'linear',
       });
     }
